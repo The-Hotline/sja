@@ -1,0 +1,152 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+    <script type="text/javascript">
+        
+        
+        
+        
+        var AWSConsoleMetrics = { pageId: "s3v3" };
+        function performanceMark(name) {
+            if (performance && performance.mark) {
+                performance.mark(name);
+            }
+        }
+        function performanceMeasure(name) {
+            if (performance && performance.measure) {
+                performance.measure(name, "PageStartLoading");
+            }
+        }
+        performanceMark("PageStartLoading");
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <title>S3 Management Console</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+<style>html { background-color: #f2f3f3; }</style>
+<meta name="awsc-session-data" content='&#34;{}&#34;' />
+<meta name="awsc-mezz" content="1">
+<meta id="awsc-mezz-region" name="awsc-mezz-region" content="us-east-1">
+<meta id="awsc-mezz-locale" name="awsc-mezz-locale" content="en">
+
+<meta name="awsc-console-supported-locales" content='{"consoleLanguages":[{"localeId":"en","supported":true,"localeDisplayName":"English (US)"},{"localeId":"en_GB","supported":false,"localeDisplayName":"English (UK)"},{"localeId":"in","supported":true,"localeDisplayName":"Bahasa Indonesia"},{"localeId":"de","supported":true,"localeDisplayName":"Deutsch"},{"localeId":"es","supported":true,"localeDisplayName":"Español"},{"localeId":"fr","supported":true,"localeDisplayName":"Français"},{"localeId":"ja","supported":true,"localeDisplayName":"日本語"},{"localeId":"it","supported":true,"localeDisplayName":"Italiano"},{"localeId":"pt_BR","supported":true,"localeDisplayName":"Português"},{"localeId":"ko","supported":true,"localeDisplayName":"한국어"},{"localeId":"zh_CN","supported":true,"localeDisplayName":"中文(简体)"},{"localeId":"zh_TW","supported":true,"localeDisplayName":"中文(繁體)"},{"localeId":"tr_TR","supported":true,"localeDisplayName":"Turkish (Turkey)"}]}'/>
+<meta id="awsc-mezz-fb" name="awsc-mezz-fb" content="0">
+<meta id="awsc-proxy-request-id" name="awsc-proxy-request-id" content="870d9dedf15e83568bf3d9f8785d4da8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="icon-domain" content='https://d2q66yyjeovezo.cloudfront.net'/><style type="text/css">
+#awsgnav #nav-logo,
+#awsgnav .nav-menu-arrow,
+#awsgnav .service-icon,
+#awsgnav .nav-selected-category-arrow,
+#awsgnav .nav-menu-content-close-arrow,
+#awsgnav .service-drag-handle,
+#awsgnav #awsc-rg-loading,
+#awsgnav #awsc-rg-error:before,
+.awsc-footer-icon,
+.awsc-service-icon /* .awsc-service-icon to be used by Console Home */
+{
+    background-image: url('https://d34xub3ut0ooib.cloudfront.net/img/icon-sprite-745950b374bf9b34a4f7528309dd162b.png');
+    background-repeat: no-repeat;
+}</style>
+
+
+<meta id="awsc-signin-endpoint" name="awsc-signin-endpoint" content="signin.aws.amazon.com">
+
+<meta id="awsc-widget-nav" name="awsc-widget-nav" content="1">
+
+<meta name="awsc-mezz-fac" content='{"browser_favicon_ia":"enabled","vpc":"enabled","send_all_metrics_to_panorama_ia":"enabled","enabled_regions_ia":"enabled","color_theme":"enabled","favorite_bar_ia":"enabled","default_language":"enabled","nav_features_disabled":"enabled","pauth_migration_ia":"enabled","head_script_async_ia":"enabled","shortbread":"enabled","default_language_ia":"enabled","unified_nav_awt":"enabled","page_title_ia":"enabled","enabled_regions":"enabled","default_region":"enabled","panorama_sdc":"enabled","color_theme_ia":"enabled","cct_caching":"enabled","ccs":"enabled","favorites_unified_search_ia":"enabled","panorama_sdc_ia":"enabled","time_zone_ia":"enabled","aperture_ia":"enabled","kraken_in_unified_search_ia":"enabled","send_all_metrics_to_panorama":"enabled","w_nav":"enabled","w_nav_ia":"enabled","new_unifiedsearch_domain_in_unified_search":"enabled","browser_favicon":"enabled","aperture":"enabled","pauth_migration":"enabled","time_zone":"enabled","paddy":"enabled","panorama":"enabled","unified_navigation_ia":"enabled","unified_nav_awt_ia":"enabled","favorite_bar":"enabled","shortbread_ia":"enabled","unified_navigation":"enabled","kraken_in_unified_search":"enabled","nav_features_disabled_ia":"enabled","legacy_feedback":"enabled","legacy_feedback_ia":"enabled","default_region_ia":"enabled","panorama_ia":"enabled","cct_caching_ia":"enabled","new_unifiedsearch_domain_in_unified_search_ia":"enabled","paddy_ia":"enabled","vpc_ia":"enabled","ccs_ia":"enabled"}'/>
+
+<script data-platform-asset="global-nav-head" src="https://a.b.cdn.console.awsstatic.com/a/v1/P7YRGOAHOPDQILXSJ6IA7ABT2A2P4L3UD7PG22QMBAKJO7QI4TIA/dist/awsc-head.js"></script>
+<script data-unified-console-app-loader data-platform-asset="unified-console" type="module" async="async" crossorigin="anonymous" src="https://a.b.cdn.console.awsstatic.com/a/v1/FPYKJCOQFXT5VXOJCRCDSXEG4FH3YMVPICYVXVXAHE7NZT75GJOA/index.js"></script>
+<link data-platform-asset="global-nav-css" rel="stylesheet" href="https://a.b.cdn.console.awsstatic.com/ae7ecf3934457e816be193a151ef9bfb3100abcc340350006f55f6fbb9155bc9/dist/polaris-global-css.css?version=*"></link>
+
+
+        <base href="/s3/">
+        <meta name="referrer" content="no-referrer-when-downgrade"/>
+        <meta name="awsc-lang" content="en">
+        <meta id="sysInfo" name="sysInfo" content = '{"cloudSystem":"PUBLIC","masterRegion":"us-east-1","region":"us-east-1","domain":"prod","allRegions":["ap-south-2","ap-south-1","eu-south-1","eu-south-2","me-central-1","il-central-1","ca-central-1","eu-central-1","eu-central-2","us-west-1","us-west-2","af-south-1","eu-north-1","eu-west-3","eu-west-2","eu-west-1","ap-northeast-3","ap-northeast-2","me-south-1","ap-northeast-1","sa-east-1","ap-east-1","ap-southeast-1","ap-southeast-2","ap-southeast-3","ap-southeast-4","us-east-1","us-east-2"],"directoryAZs":["use1-az4","use1-az5","use1-az6","eun1-az2","eun1-az1","apne1-az1","apne1-az4","usw2-az1","usw2-az4","usw2-az3","eun1-az3"],"directoryRegions":["eu-north-1","ap-northeast-1","us-east-1","us-west-2"]}' >
+        <meta property="requestLocale" content="en">
+        
+        
+        <meta id="meta-features-json" name="features-json" data-featuresjson='[{"externalId":"s3-twr","enabled":true},{"externalId":"s3-veyron","enabled":true},{"externalId":"s3-ap-edit","enabled":true},{"externalId":"s3-eu-north-1","enabled":true},{"externalId":"s3-kahlo","enabled":true},{"externalId":"s3-opt-in-regions","enabled":true},{"externalId":"s3-me","enabled":true},{"externalId":"s3-us-east-1","enabled":true},{"externalId":"s3-us-east-2","enabled":true},{"externalId":"s3-tulip-ezcrc","enabled":true},{"externalId":"s3-polaris-access-analyzer-access-preview","enabled":true},{"externalId":"s3-copy","enabled":true},{"externalId":"s3-log-response-data","enabled":true},{"externalId":"s3-lens-logging","enabled":true},{"externalId":"s3-eu-south-2","enabled":true},{"externalId":"s3-rrs","enabled":true},{"externalId":"s3-eu-south-1","enabled":true},{"externalId":"s3-new-page-titles","enabled":true},{"externalId":"s3-mrap-failover","enabled":true},{"externalId":"s3-ld","enabled":true},{"externalId":"s3-make-public","enabled":true},{"externalId":"s3-report-format","enabled":true},{"externalId":"s3-csp-filter","enabled":true},{"externalId":"s3-bucket-key","enabled":true},{"externalId":"glacier-storage-metrics","enabled":true},{"externalId":"s3-sdo","enabled":true},{"externalId":"s3-us-west-2","enabled":true},{"externalId":"s3-polaris-acceleration-sa-east-1","enabled":true},{"externalId":"s3-quick-tips","enabled":true},{"externalId":"s3-block-prefix-copy","enabled":true},{"externalId":"s3-us-west-1","enabled":true},{"externalId":"glacier-launched-af-south-1","enabled":true},{"externalId":"s3-replication-speckle","enabled":true},{"externalId":"s3-ap-east-1","enabled":true},{"externalId":"s3-polaris-aws-target-placements","enabled":true},{"externalId":"iam-policy-editor","enabled":true},{"externalId":"s3-batch-ops-ap-south-1","enabled":true},{"externalId":"glacier-launched-sa-east-1","enabled":true},{"externalId":"s3-batch-ops-ap-south-2","enabled":true},{"externalId":"s3-response-payload-checksum","enabled":true},{"externalId":"glacier-launched-ap-northeast-1","enabled":true},{"externalId":"glacier-launched-ap-northeast-3","enabled":true},{"externalId":"s3-polaris-bops","enabled":true},{"externalId":"s3-polaris-access-analyzer","enabled":true},{"externalId":"glacier-launched-ap-northeast-2","enabled":true},{"externalId":"s3-batch-ops-ap-northeast-3","enabled":true},{"externalId":"s3-sc-isidore","enabled":true},{"externalId":"s3-batch-ops-ap-northeast-2","enabled":true},{"externalId":"s3-batch-ops-ap-northeast-1","enabled":true},{"externalId":"s3-csp-filter-enfc","enabled":true},{"externalId":"s3-select","enabled":true},{"externalId":"s3-select-metrics","enabled":true},{"externalId":"s3-batch-ops-worm","enabled":true},{"externalId":"s3-crr-slice","enabled":true},{"externalId":"s3-create-bucket-extra-properties","enabled":true},{"externalId":"s3-eu-central-2","enabled":true},{"externalId":"s3-ap-abba","enabled":true},{"externalId":"s3-staircase","enabled":true},{"externalId":"s3-eu-central-1","enabled":true},{"externalId":"s3-polaris-acceleration-eu-west-2","enabled":true},{"externalId":"s3-polaris-acceleration-eu-west-3","enabled":true},{"externalId":"s3-prod-stack-eu-central-2","enabled":true},{"externalId":"s3-polaris-acceleration-eu-west-1","enabled":true},{"externalId":"s3-prod-stack-eu-central-1","enabled":true},{"externalId":"glacier-launched-ca-central-1","enabled":true},{"externalId":"glacier-launched-eu-north-1","enabled":true},{"externalId":"s3-prod-stack-eu-south-1","enabled":true},{"externalId":"s3-prod-stack-eu-south-2","enabled":true},{"externalId":"s3-sharpie","enabled":true},{"externalId":"s3-upload-parallel-1","enabled":true},{"externalId":"s3-delete","enabled":true},{"externalId":"aws-quicksight","enabled":true},{"externalId":"s3-retina","enabled":true},{"externalId":"s3-sublime","enabled":true},{"externalId":"s3-appconfig-testing","enabled":true},{"externalId":"s3-homepage","enabled":true},{"externalId":"s3-crr-v2","enabled":true},{"externalId":"s3-ap","enabled":true},{"externalId":"s3-polaris-object-ownership-pub","enabled":true},{"externalId":"s3-nightfall","enabled":true},{"externalId":"s3-an","enabled":true},{"externalId":"s3-il-central-1","enabled":true},{"externalId":"s3-polaris-acceleration-us-west-2","enabled":true},{"externalId":"s3-eu-west-3","enabled":true},{"externalId":"s3-crr-kms","enabled":true},{"externalId":"s3-polaris-acceleration-us-west-1","enabled":true},{"externalId":"s3-ol-abba","enabled":true},{"externalId":"s3-eu-west-2","enabled":true},{"externalId":"s3-eu-west-1","enabled":true},{"externalId":"s3-youtube-video","enabled":true},{"externalId":"s3-block-version-view-folder-delete","enabled":true},{"externalId":"s3-prod-stack-ap-east-1","enabled":true},{"externalId":"s3-essos","enabled":true},{"externalId":"s3-compact-table","enabled":true},{"externalId":"s3-batch-ops-inv","enabled":true},{"externalId":"s3-banner","enabled":true},{"externalId":"s3-batch-ops-me-south-1","enabled":true},{"externalId":"s3-ot-up","enabled":false},{"externalId":"s3-inventory-bops-bucketkey","enabled":true},{"externalId":"glacier-launched-us-west-1","enabled":true},{"externalId":"s3-ap-lamb-access","enabled":true},{"externalId":"glacier-launched-us-west-2","enabled":true},{"externalId":"s3-prod-stack-sa-east-1","enabled":true},{"externalId":"s3-objlist-fill-maxkeys","enabled":true},{"externalId":"s3-ap-northeast-2","enabled":true},{"externalId":"s3-ap-northeast-3","enabled":true},{"externalId":"s3-delete-marker-replication","enabled":true},{"externalId":"s3-polaris-acceleration-eu-central-1","enabled":true},{"externalId":"s3-copy-from-bucket","enabled":true},{"externalId":"s3-zia","enabled":true},{"externalId":"s3-ap-northeast-1","enabled":true},{"externalId":"s3-request-blocker","enabled":true},{"externalId":"s3-ap-southeast-3","enabled":true},{"externalId":"s3-ap-southeast-2","enabled":true},{"externalId":"s3-ap-southeast-1","enabled":true},{"externalId":"s3-lamb-inregion-shadow","enabled":true},{"externalId":"s3-af-south-1","enabled":true},{"externalId":"s3-oi","enabled":true},{"externalId":"s3-brawn","enabled":true},{"externalId":"s3-prod-stack-us-west-1","enabled":true},{"externalId":"s3-initiate-restore","enabled":true},{"externalId":"s3-ap-details","enabled":true},{"externalId":"s3-prod-stack-us-west-2","enabled":true},{"externalId":"s3-lamb-localstorage","enabled":true},{"externalId":"s3-banner-comprehend","enabled":true},{"externalId":"s3-send-to-put-copy","enabled":true},{"externalId":"s3-rename","enabled":true},{"externalId":"s3-sharpie-v2","enabled":true},{"externalId":"s3-prod-stack-il-central-1","enabled":true},{"externalId":"s3-ot","enabled":true},{"externalId":"s3-batch-ops-eu-north-1","enabled":true},{"externalId":"s3-batch-ops-ca-central-1","enabled":true},{"externalId":"s3-versioned-view","enabled":true},{"externalId":"s3-region-level-enc","enabled":false},{"externalId":"s3-share-link","enabled":true},{"externalId":"s3-prod-stack-eu-north-1","enabled":true},{"externalId":"s3-woodchipper","enabled":true},{"externalId":"s3-batch-ops","enabled":true},{"externalId":"glacier-launched-ap-east-1","enabled":true},{"externalId":"s3-ap-create-bpa-warning","enabled":true},{"externalId":"s3-lc-est-cost-msg","enabled":true},{"externalId":"s3-new-multipart-copy","enabled":false},{"externalId":"s3-prod-stack-us-east-2","enabled":true},{"externalId":"s3-prod-stack-us-east-1","enabled":true},{"externalId":"s3-prod-stack-ap-northeast-1","enabled":true},{"externalId":"s3-ap-southeast-4","enabled":true},{"externalId":"s3-prod-stack-ap-northeast-2","enabled":true},{"externalId":"s3-prod-stack-ap-northeast-3","enabled":true},{"externalId":"s3-prod-stack-ap-southeast-2","enabled":true},{"externalId":"s3-prod-stack-ap-southeast-1","enabled":true},{"externalId":"s3-marketplace","enabled":true},{"externalId":"delete-objects-fallback","enabled":true},{"externalId":"s3-staircase-disabled-me-central-1","enabled":true},{"externalId":"s3-mrap","enabled":true},{"externalId":"s3-polaris-ap","enabled":true},{"externalId":"s3-prizm","enabled":true},{"externalId":"s3-me-south-1","enabled":true},{"externalId":"s3-up","enabled":true},{"externalId":"s3-prod-stack-ap-southeast-4","enabled":true},{"externalId":"s3-prod-stack-ap-southeast-3","enabled":true},{"externalId":"s3-eb","enabled":true},{"externalId":"s3-kms","enabled":true},{"externalId":"s3-polaris-acceleration-ap-northeast-1","enabled":true},{"externalId":"s3-polaris-acceleration-ap-northeast-2","enabled":true},{"externalId":"shortbread-cookie","enabled":true},{"externalId":"s3-sc-glacier","enabled":true},{"externalId":"s3-batch-ops-eu-west-1","enabled":true},{"externalId":"s3-batch-ops-eu-west-2","enabled":true},{"externalId":"glacier-launched-me-south-1","enabled":true},{"externalId":"s3-batch-ops-eu-west-3","enabled":true},{"externalId":"s3-prod-stack-me-south-1","enabled":true},{"externalId":"s3-download","enabled":true},{"externalId":"s3-batch-ops-me-central-1","enabled":true},{"externalId":"s3-batch-ops-ap-east-1","enabled":true},{"externalId":"s3-ca-central-1","enabled":true},{"externalId":"glacier-launched-us-east-1","enabled":true},{"externalId":"s3-cross-account-olap","enabled":true},{"externalId":"s3-cwm-accesspoint-filter","enabled":true},{"externalId":"glacier-launched-us-east-2","enabled":true},{"externalId":"s3-ap-sync-region","enabled":true},{"externalId":"s3-deep-archive","enabled":true},{"externalId":"s3-batch-ops-us-west-2","enabled":true},{"externalId":"s3-veyron-ga-copy-v-s3","enabled":true},{"externalId":"s3-tq","enabled":false},{"externalId":"s3-db","enabled":true},{"externalId":"s3-replication-blast","enabled":true},{"externalId":"s3-ap-south-1","enabled":true},{"externalId":"s3-ap-south-2","enabled":true},{"externalId":"s3-bpa-no-acl-defaults","enabled":true},{"externalId":"s3-polaris-lamb","enabled":true},{"externalId":"s3-batch-ops-us-west-1","enabled":true},{"externalId":"s3-cross-account-ap","enabled":true},{"externalId":"s3-odr","enabled":true},{"externalId":"s3-dndr","enabled":true},{"externalId":"s3-polaris-acceleration-us-east-2","enabled":true},{"externalId":"s3-polaris-acceleration-us-east-1","enabled":true},{"externalId":"s3-polaris-spotlight","enabled":true},{"externalId":"s3-batch-ops-delete-tags","enabled":true},{"externalId":"s3-inventory-int-access","enabled":true},{"externalId":"glacier-launched-ap-southeast-1","enabled":true},{"externalId":"s3-cb","enabled":true},{"externalId":"s3-me-central-1","enabled":true},{"externalId":"s3-veyron-ga","enabled":true},{"externalId":"glacier-launched-ap-southeast-2","enabled":true},{"externalId":"s3-storage-insights","enabled":true},{"externalId":"s3-batch-ops-tags","enabled":true},{"externalId":"aws-market-target-system","enabled":true},{"externalId":"s3-intro-video","enabled":true},{"externalId":"s3-pennywise","enabled":true},{"externalId":"s3-batch-ops-eu-south-1","enabled":true},{"externalId":"s3-si","enabled":true},{"externalId":"s3-batch-ops-ap-southeast-1","enabled":true},{"externalId":"s3-batch-ops-eu-south-2","enabled":true},{"externalId":"s3-batch-ops-ap-southeast-4","enabled":true},{"externalId":"s3-batch-ops-ap-southeast-3","enabled":true},{"externalId":"s3-batch-ops-ap-southeast-2","enabled":true},{"externalId":"s3-darknight","enabled":true},{"externalId":"s3-replication-metrics","enabled":true},{"externalId":"s3-prod-stack-ca-central-1","enabled":true},{"externalId":"s3-cf","enabled":true},{"externalId":"object-list-filter-sync","enabled":true},{"externalId":"s3-polaris-access-analyzer-ap","enabled":true},{"externalId":"s3-banner-v2","enabled":true},{"externalId":"s3-help-panel","enabled":true},{"externalId":"glacier-launched-eu-central-1","enabled":true},{"externalId":"s3-inventory-encryption","enabled":true},{"externalId":"s3-batch-ops-il-central-1","enabled":true},{"externalId":"s3-gl-rsp","enabled":true},{"externalId":"s3-polaris-bpa","enabled":true},{"externalId":"s3-batch-ops-us-east-1","enabled":true},{"externalId":"s3-batch-ops-us-east-2","enabled":true},{"externalId":"s3-batch-ops-iceidore","enabled":true},{"externalId":"s3-crr-rpo","enabled":true},{"externalId":"s3-ap-create","enabled":true},{"externalId":"s3-prod-stack-ap-south-2","enabled":true},{"externalId":"s3-batch-ops-sa-east-1","enabled":true},{"externalId":"s3-prod-stack-ap-south-1","enabled":true},{"externalId":"glacier-launched-eu-west-2","enabled":true},{"externalId":"glacier-launched-eu-west-3","enabled":true},{"externalId":"s3-staircase-disabled-eu-south-2","enabled":true},{"externalId":"glacier-launched-eu-west-1","enabled":true},{"externalId":"s3-access","enabled":true},{"externalId":"s3-gl-rest-event","enabled":true},{"externalId":"s3-polaris-object-ownership","enabled":true},{"externalId":"s3-crr-cn-custom-text","enabled":false},{"externalId":"s3-select-presign-request","enabled":true},{"externalId":"s3-staircase-disabled-ap-south-2","enabled":true},{"externalId":"s3-staircase-disabled-ap-southeast-4","enabled":true},{"externalId":"s3-veyron-ga-hp-p2","enabled":true},{"externalId":"s3-ap-get-cache","enabled":true},{"externalId":"s3-polaris-acceleration-ap-south-1","enabled":true},{"externalId":"s3-prod-stack-me-central-1","enabled":true},{"externalId":"s3-crr","enabled":true},{"externalId":"s3-spotlight","enabled":true},{"externalId":"s3-int-tiering","enabled":true},{"externalId":"use-status-500","enabled":true},{"externalId":"s3-polaris-acceleration-ap-southeast-1","enabled":true},{"externalId":"s3-lc-filter","enabled":true},{"externalId":"s3-polaris-acceleration-ap-southeast-2","enabled":true},{"externalId":"s3-batch-ops-af-south-1","enabled":true},{"externalId":"s3-bops-active-timer","enabled":true},{"externalId":"s3-prod-stack-af-south-1","enabled":true},{"externalId":"s3-data-import","enabled":true},{"externalId":"s3-prod-stack-eu-west-3","enabled":true},{"externalId":"s3-lamb-account-snapshot","enabled":true},{"externalId":"s3-securus","enabled":true},{"externalId":"s3-batch-ops-ga","enabled":true},{"externalId":"s3-prod-stack-eu-west-1","enabled":true},{"externalId":"s3-prod-stack-eu-west-2","enabled":true},{"externalId":"aws-target-service-analytics","enabled":true},{"externalId":"s3-polaris-acceleration","enabled":true},{"externalId":"s3-crr-kms-template-v3","enabled":true},{"externalId":"s3-crr-kms-template-v2","enabled":true},{"externalId":"s3-cross-account-mrap","enabled":true},{"externalId":"s3-copy-through-ap","enabled":true},{"externalId":"s3-polaris-acceleration-ca-central-1","enabled":true},{"externalId":"s3-change-encryption","enabled":true},{"externalId":"s3-vanilla","enabled":true},{"externalId":"s3-oi-ol","enabled":true},{"externalId":"s3-lens-export-to-cloudwatch","enabled":true},{"externalId":"s3-bpa-no-acl-defaults-prerequisites","enabled":true},{"externalId":"s3-polaris-update-route-mistmatch-reload","enabled":true},{"externalId":"s3-bpa-no-acl-defaults-banners","enabled":true},{"externalId":"s3-no-enc","enabled":true},{"externalId":"s3-srr","enabled":true},{"externalId":"s3-sa-east-1","enabled":true},{"externalId":"s3-inv-acl","enabled":true},{"externalId":"s3-tulip","enabled":true},{"externalId":"s3-batch-ops-eu-central-1","enabled":true},{"externalId":"s3-bulk-analyze-access","enabled":true},{"externalId":"s3-change-storage-class","enabled":true},{"externalId":"s3-batch-ops-lambda","enabled":true},{"externalId":"glacier-launched-eu-south-1","enabled":true},{"externalId":"s3-veyron-ga-regions","enabled":true},{"externalId":"glacier-launched-ap-south-1","enabled":true},{"externalId":"s3-oi-pq","enabled":false},{"externalId":"s3-x-acceleration","enabled":true},{"externalId":"s3-batch-ops-eu-central-2","enabled":true}]' awsc-clog-fac-disabled="true"/>
+        <link rel="stylesheet" type="text/css" href="https://d29sfhxsuc7nqn.cloudfront.net/content/e2b39583-c729-4027-9d53-8449ea48227d/commonv3.css" charset="utf-8"/>
+
+    
+</head>
+<body spellcheck="false">
+  <div id="b">
+    <div id="h" role="navigation" ng-non-bindable>
+
+
+<div id="consoleNavHeader" style=""></div>
+</div>
+<div id="cc">
+  <div id="c">
+
+
+      <div class="awsui" id="app"></div>
+    
+</div>
+</div>
+<div id="f" role="contentinfo" ng-non-bindable>
+
+<div id="footer">
+</div>
+<div id="console-nav-footer" style="">
+    <div id="footer-content">
+    </div>
+</div>
+</div>
+</div>
+
+<script data-platform-asset="panorama" id="awsc-panorama-bundle" type="text/javascript" crossorigin="anonymous" src="https://a.b.cdn.console.awsstatic.com/a/v1/QRBPLTN7EPXHIFVJY2TQBYBIQD4UACI2RR254FXRW3JG3EN7IDPA/init/0948dd1d0df94b92bc8db9caa009ec7c40ae57c17e69427c8acf42dfe6a028f5.js" data-url="https://a.b.cdn.console.awsstatic.com/a/v1/QRBPLTN7EPXHIFVJY2TQBYBIQD4UACI2RR254FXRW3JG3EN7IDPA/f19754421cc447358b9e6e29b8865ad28cbcbca6679f4e959f2db72f5038214f.js"></script>
+<script data-platform-asset="telemetry-broker" type="text/javascript" src="https://a.b.cdn.console.awsstatic.com/a/v1/ZM7GAKM4URMYWLEM2FRYCHG47XDAW5HHEFMXLGLV4O3ICCMPVHFA/index.js"></script>
+
+
+        <script type="text/javascript" src="https://d29sfhxsuc7nqn.cloudfront.net/content/e2b39583-c729-4027-9d53-8449ea48227d/vendorv3.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://d29sfhxsuc7nqn.cloudfront.net/content/e2b39583-c729-4027-9d53-8449ea48227d/en-json.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://d29sfhxsuc7nqn.cloudfront.net/content/e2b39583-c729-4027-9d53-8449ea48227d/commonv3.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://d29sfhxsuc7nqn.cloudfront.net/content/e2b39583-c729-4027-9d53-8449ea48227d/s3consolev3.js" charset="utf-8"></script>
+        
+
+        <script type="text/javascript">
+            performanceMeasure("PageDoneLoading");
+        </script>
+    
+
+
+
+    
+</body>
+</html>
+
